@@ -14,23 +14,37 @@ turtle.setup (width=600, height=600)    # Set the size of the window
 
 tina = turtle.Turtle()                  # Create a turtle named tina
 
-tina.forward(120)
-tina.pencolor("red")
+tina.penup()
+tina.goto(60,-20)
 
-tina.right(120)
-tina.forward(120)
-tina.pencolor("blue")
-
-tina.right(120)
-tina.forward(120)
-tina.pencolor("blue")
-
-tina.color("green")
+tina.pendown()
+tina.color("black")
 tina.begin_fill()
-tina.right(120)
-tina.forward(120)
+tina.circle(90)
 tina.end_fill()
 
 
+
+tina.goto(40,155)
+tina.left(180)
+tina.color("red")
+tina.begin_fill()
+tina.circle(90,180)
+tina.end_fill()
+
+tina.penup()
+tina.goto(80,-25)
+tina.left(360)
+tina.color("red")
+tina.begin_fill()
+tina.circle(90,180)
+tina.end_fill()
+
+tina.goto(90,155)
+tina.color("black")
+tina.right(90)
+tina.begin_fill()
+tina.circle(30,180)
+tina.end_fill()
 
 turtle.exitonclick()
