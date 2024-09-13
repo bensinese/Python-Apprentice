@@ -15,6 +15,15 @@ screen = turtle.Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor('white')
 
-t = turtle.Turtle()
+tina = turtle.Turtle()
+tina.shape('turtle')  
+... # Your Code here
 
-... # Your Code Here
+tina.color("green")
+tina.penup()
+tina.speed(3)
+
+tina.turtlesize(stretch_wid=10, stretch_len=10, outline=4)
+
+turtle.exitonclick()     
+
