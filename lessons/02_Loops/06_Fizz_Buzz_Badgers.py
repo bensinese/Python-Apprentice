@@ -17,9 +17,7 @@ Your program should print 4 badgers.
 """
 
 
-for i in range(10,78,15): # Change only this line
-
-    # Don't change anything below this line
+for i in range(10,78,15):
     if i % 15 == 0:
         print(i, '🐍 snake!')
     elif i % 5 == 0:
