@@ -43,18 +43,27 @@ def ask_integer(prompt):
 
 # Pick the random number
 n = random.randint(1, 100)
+if n % 7 == 0:
+    n = random.randint(1, 100)
 # In your loop:
-
+while True:
     # Get the user's guess
-userguess = input("give me a number")
+    userguess = ask_integer("give me a number")
     # If the user's guess is divisible by 7, tell the user to start over
-if int(userguess) % 7 == 0:
-    print("start over")
-elif int(userguess) < n:
-    print("too low")
-else:
-    userguess = n
-    print("you got it")
+    if userguess % 7 == 0:
+        print("start over")
+        continue
+    
+    if userguess < n:
+        print("too low")
+        continue
+
+    if userguess > n:
+        print("too high")
+        continue
+
+    if userguess == n:
+        print("you got it")
     # If the user's guess is too low, tell the user
     # If the user's guess is correct, tell the user and break out of the loop
 
