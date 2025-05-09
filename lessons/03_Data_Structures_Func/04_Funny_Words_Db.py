@@ -31,7 +31,7 @@ def add_definition(db, key, value):
 
     #add_definition(db,)
 
-    print(db)
+    
     
 
     """
@@ -47,6 +47,9 @@ def add_definition(db, key, value):
 
     If there are already 5 items in the database, an error message is displayed and the new item is not added.
     """
+    if len(db) > 5:
+        print(error)
+    
 
     # Check the limit
 
@@ -104,6 +107,9 @@ def is_funny(definition):
     return False
 
 def update_listbox(db):
+    add_definition
+    
+
     """
     Update the listbox with the current definitions in the database.1
 
@@ -114,12 +120,16 @@ def update_listbox(db):
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
     l =  []
-        
 
+    
     # Add each definition to a string
+
     # iterate over the dict's key-value pairs and turn them into
     # strings, then add the strings to the list with .append()
-
+    for key, value in db.items():
+        l.append(f"{key} : {value}")
+        
+    
     return l
 
 ################################################################
